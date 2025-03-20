@@ -1,0 +1,23 @@
+#GRU model
+gru_model.dropout_rate = 0.5
+gru_model.dense_unit = 256
+
+# Training
+Trainer.total_steps = 4000
+Trainer.log_interval = 100
+Trainer.ckpt_interval = 100
+Trainer.learning_rate = 1e-3
+Trainer.patience = 10
+Trainer.min_delta=0.001
+
+# Input pipeline
+load.name = 'hapt'
+load.data_dir = '/home/data/HAPT_dataset/RawData/'
+load.window_size = 128
+load.overlap = 0.5
+prepare.batch_size = 32
+prepare.caching = False
+prepare.window_size=128
+
+
+
